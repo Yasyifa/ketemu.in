@@ -6,7 +6,7 @@ use App\Models\FoundItem;
 use App\Models\LostItem;
 class HomeController extends Controller
 {
-    public function index()
+    public function home()
     {
          // Ambil semua item yang ditemukan dan yang hilang
          $foundItems = FoundItem::all();
