@@ -43,9 +43,9 @@
 
         .profile-section img {
             width: 80px; /* Memperkecil ukuran gambar */
-            height: 80px;
+            height: 100px;
             border-radius: 50%;
-            margin-bottom: 15px;
+            margin-bottom: 0px;
         }
 
         .profile-section p {

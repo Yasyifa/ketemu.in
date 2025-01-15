@@ -52,136 +52,159 @@
         /*style pengumuman */
 
         /* About Section */
-.about {
-    background-color: #f1f8ff; /* Warna latar belakang yang lebih terang dan modern */
-    padding: 60px 0;
-    font-family: 'Poppins', sans-serif; /* Font modern */
+        .about {
+            background-color: #f1f8ff; /* Warna latar belakang yang lebih terang dan modern */
+            padding: 60px 0;
+            font-family: 'Poppins', sans-serif; /* Font modern */
+        }
+
+        /* Section Title */
+        .section-title h2 {
+            font-size: 36px;
+            color: #2a3d52; /* Warna biru cerah untuk judul */
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .section-title p {
+            font-size: 18px;
+            text-align: center;
+            color: #555;
+            line-height: 1.6;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .card-img-top {
+            height: 100px; /* Ukuran tinggi gambar */
+            object-fit: cover; /* Menjaga rasio gambar tetap proporsional */
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            width: 100%; /* Pastikan gambar mengisi lebar card */
+        }
+
+        /* Efek hover untuk gambar */
+.portfolio-content img {
+    height: 200px; /* Menentukan tinggi gambar */
+    object-fit: cover; /* Menjaga rasio gambar tetap proporsional */
+    width: 100%; /* Memastikan gambar mengisi lebar kontainer */
+    transition: transform 0.3s ease; /* Transisi halus saat hover */
 }
 
-/* Section Title */
-.section-title h2 {
-    font-size: 36px;
-    color: #2a3d52; /* Warna biru cerah untuk judul */
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 20px;
-    animation: fadeIn 1s ease-out;
+/* Efek saat hover */
+.portfolio-content img:hover {
+    transform: scale(0.95); /* Mengurangi ukuran gambar menjadi 95% saat hover */
 }
 
-.section-title p {
-    font-size: 18px;
-    text-align: center;
-    color: #555;
-    line-height: 1.6;
-    animation: fadeIn 1.5s ease-out;
-}
 
-/* Logo Section */
-.logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-}
 
-.about-logo {
-    width: 80%;
-    max-width: 250px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-}
+        /* Logo Section */
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+        }
 
-.about-logo:hover {
-    transform: scale(1.1); /* Efek hover pada logo */
-}
+        .about-logo {
+            width: 80%;
+            max-width: 250px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
 
-/* Content Section */
-.content {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    margin-top: 40px;
-    animation: fadeIn 2s ease-out;
-}
+        .about-logo:hover {
+            transform: scale(1.1); /* Efek hover pada logo */
+        }
 
-.content h2 {
-    font-size: 28px;
-    color: #243950;
-    margin-bottom: 20px;
-    text-align: center;
-}
+        /* Content Section */
+        .content {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+            animation: fadeIn 2s ease-out;
+        }
 
-.content p {
-    font-size: 16px;
-    line-height: 1.8;
-    color: #555;
-    text-align: justify;
-    animation: fadeIn 2.5s ease-out;
-}
+        .content h2 {
+            font-size: 28px;
+            color: #243950;
+            margin-bottom: 20px;
+            text-align: center;
+        }
 
-.fst-italic {
-    font-style: italic;
-    color: #888;
-}
+        .content p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            text-align: justify;
+            animation: fadeIn 2.5s ease-out;
+        }
 
-/* Styling for List */
-ul {
-    list-style-type: none;
-    padding: 0;
-}
+        .fst-italic {
+            font-style: italic;
+            color: #888;
+        }
 
-ul li {
-    font-size: 16px;
-    color: #333;
-    margin-bottom: 10px;
-}
+        /* Styling for List */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
 
-ul li i {
-    color: #007bff;
-    margin-right: 10px;
-}
+        ul li {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 10px;
+        }
 
-/* Animation for fade-in */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
+        ul li i {
+            color: #007bff;
+            margin-right: 10px;
+        }
+
+        /* Animation for fade-in */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    /* Responsiveness */
+    @media (max-width: 768px) {
+        .content {
+            padding: 20px;
+        }
+
+        .section-title h2 {
+            font-size: 28px;
+        }
+
+        .section-title p {
+            font-size: 16px;
+        }
+
+        .content h2 {
+            font-size: 24px;
+        }
+
+        .content p {
+            font-size: 14px;
+        }
+
+        .about-logo {
+            width: 60%;
+        }
     }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Responsiveness */
-@media (max-width: 768px) {
-    .content {
-        padding: 20px;
-    }
-
-    .section-title h2 {
-        font-size: 28px;
-    }
-
-    .section-title p {
-        font-size: 16px;
-    }
-
-    .content h2 {
-        font-size: 24px;
-    }
-
-    .content p {
-        font-size: 14px;
-    }
-
-    .about-logo {
-        width: 60%;
-    }
-}
 
 
 
@@ -250,24 +273,29 @@ ul li i {
         <h1 class="sitename">{{ Auth::user()->name }}</h1>
       </a>
     </div>
+    
   
 
     <nav id="navmenu" class="navmenu">
       <ul>
         <li><a href="#home" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
-        <li class="dropdown"><a href="#pelaporan"><i class="bi bi-menu-button navicon"></i> <span>Pelaporan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-
-             
+        <li class="dropdown"><a href="#pelaporan"><i class="bi bi-menu-button navicon"></i> <span>Pelaporan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>  
                 <ul>
                   <li><a href="{{ route('lost_items.create') }}">Kehilangan</a></li>
                   <li><a href="{{ route('found_items.create') }}">Ditemukan</a></li>
                 </ul>
-      
           </li>
         <li><a href="#pengumuman"><i class="bi bi-images navicon"></i> Pengumuman</a></li>
         <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
-        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
+        <li><a href="{{ route('history') }}"><i class="bi bi-hdd-stack navicon"></i> History</a></li>
         <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+        <!-- Tombol Logout -->
+        <li>
+          <form action="{{ route('logout') }}" method="POST" style="margin-top: 15px;">
+              @csrf
+              <button type="submit" class="btn btn-danger btn-sm w-100">Logout</button>
+          </form>
+      </li>
       </ul>
     </nav>
 
@@ -375,10 +403,10 @@ ul li i {
         <div class="row">
           <div class="col-lg-6">
             <ul>
-              <li><i class="bi bi-chevron-right"></i> <strong>Didirikan:</strong> <span>2025</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Didirikan:</strong> <span>2024</span></li>
               <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.ketemu.in</span></li>
               <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+62 123 456 7890</span></li>
-              <li><i class="bi bi-chevron-right"></i> <strong>Lokasi:</strong> <span>Jakarta, Indonesia</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Lokasi:</strong> <span>Semarang, Indonesia</span></li>
             </ul>
           </div>
           <div class="col-lg-6">
@@ -415,7 +443,7 @@ ul li i {
             <div class="stats-item">
               <i class="bi bi-emoji-smile"></i>
               <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Happy Clients</strong> <span>consequuntur quae</span></p>
+              <p><strong>HAPPY CLIENTS</strong> <span>Mereka yang berhasil menemukan barangnya kembali</span></p>
             </div>
           </div><!-- End Stats Item -->
 
@@ -423,7 +451,7 @@ ul li i {
             <div class="stats-item">
               <i class="bi bi-journal-richtext"></i>
               <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Projects</strong> <span>adipisci atque cum quia aut</span></p>
+              <p><strong>BARANG YANG DILAPORKAN</strong> <br> <span>Cari barang anda disini</span></p>
             </div>
           </div><!-- End Stats Item -->
 
@@ -431,7 +459,7 @@ ul li i {
             <div class="stats-item">
               <i class="bi bi-headset"></i>
               <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Hours Of Support</strong> <span>aut commodi quaerat</span></p>
+              <p><strong>JAM PELAYANAN</strong> <span>Hubungi kami jika ada kendala</span></p>
             </div>
           </div><!-- End Stats Item -->
 
@@ -439,7 +467,7 @@ ul li i {
             <div class="stats-item">
               <i class="bi bi-people"></i>
               <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Hard Workers</strong> <span>rerum asperiores dolor</span></p>
+              <p><strong>TEAM YANG BERDEDIKASI</strong><br> <span>Kami bekerja keras untuk membantu anda menemukan barang hilang</span></p>
             </div>
           </div><!-- End Stats Item -->
 
@@ -448,145 +476,6 @@ ul li i {
       </div>
 
     </section><!-- /Stats Section -->
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Skills</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row skills-content skills-animation">
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>HTML</span> <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>CSS</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>JavaScript</span> <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-          </div>
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>PHP</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>WordPress/CMS</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Photoshop</span> <i class="val">55%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Skills Section -->
-    <!-- Services Section -->
-    <section id="services" class="services section">
-
-      
-    
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Services</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
-            <div>
-              <h4 class="title"><a href="service-details.html" class="stretched-link">Lorem Ipsum</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-            </div>
-          </div>
-          <!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
-            <div>
-              <h4 class="title"><a href="service-details.html" class="stretched-link">Dolor Sitema</a></h4>
-              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
-            <div>
-              <h4 class="title"><a href="service-details.html" class="stretched-link">Sed ut perspiciatis</a></h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
-            <div class="icon flex-shrink-0"><i class="bi bi-binoculars"></i></div>
-            <div>
-              <h4 class="title"><a href="service-details.html" class="stretched-link">Magni Dolores</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="500">
-            <div class="icon flex-shrink-0"><i class="bi bi-brightness-high"></i></div>
-            <div>
-              <h4 class="title"><a href="service-details.html" class="stretched-link">Nemo Enim</a></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
-            <div class="icon flex-shrink-0"><i class="bi bi-calendar4-week"></i></div>
-            <div>
-              <h4 class="title"><a href="service-details.html" class="stretched-link">Eiusmod Tempor</a></h4>
-              <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
-            </div>
-          </div><!-- End Service Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Services Section -->
 
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials section light-background">
