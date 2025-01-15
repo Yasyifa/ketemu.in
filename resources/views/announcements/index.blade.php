@@ -5,18 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pengumuman</title>
 
-    <!-- Tambahkan CSS langsung di sini -->
     <style>
-        body {
-            padding-top: 0px; /* Menambahkan jarak atas pada body */
+         body {
+            background-color: #1d2946; /* Warna biru tua */
+            color: white; /* Warna teks putih */
         }
+
 
         .card {
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px; /* Memberikan jarak antar card */
+            margin-bottom: 30px;
             width: 300px;
-            position: relative; /* Untuk positioning status di dalam card */
+            position: relative;
         }
 
         .card-img-top {
@@ -28,7 +29,7 @@
 
         .card-body {
             padding: 20px;
-            min-height: 100px; /* Menjamin card tidak terlalu pendek */
+            min-height: 100px;
         }
 
         .card-title {
@@ -47,12 +48,10 @@
             color: white;
         }
 
-        /* Anda juga bisa menambahkan margin-top pada section jika ingin lebih banyak ruang */
         .announcement {
-            margin-top: 50px; /* Jarak antara konten dengan bagian atas */
+            margin-top: 50px;
         }
 
-        /* Styling untuk judul pengumuman */
         .announcement-title {
             text-align: center;
             font-size: 32px;
@@ -60,34 +59,80 @@
             margin-bottom: 40px;
         }
 
-        /* Styling untuk status */
         .status-label {
             position: absolute;
-            top: 10px; /* Menempatkan status di atas gambar */
-            left: 10px; /* Menempel ke kiri */
-            background-color: #28a745; /* Default warna status 'found' */
+            top: 10px;
+            left: 10px;
+            background-color: #28a745;
             color: white;
             padding: 5px 10px;
             font-size: 15px;
             border-radius: 5px;
         }
 
-        /* Menambahkan warna untuk status 'lost' */
         .status-lost {
             background-color: #dc3545;
         }
+
+        .btn-back-home {
+            display: block;
+            width: 200px;
+            margin: 30px auto;
+            padding: 10px;
+            background-color: #1d2946;
+            color: white;
+            text-align: center;
+            font-size: 18px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .btn-back-home:hover {
+            background-color: #007bff;
+        }
+
+        /* Styling untuk form pencarian */
+        .search-form {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .search-input {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .search-button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-button:hover {
+            background-color: #0056b3;
+        }
     </style>
 
-    <!-- Pastikan Bootstrap di-load jika diperlukan -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
-<!-- Pengumuman Index -->
 <section id="announcement" class="announcement section">
     <div class="container">
-        <!-- Judul Pengumuman -->
         <h2 class="announcement-title">Semua Pengumuman</h2>
+        <!-- Form Pencarian -->
+        <div class="search-form">
+            <form action="{{ route('announcements.search') }}" method="GET">
+                <input type="text" name="query" class="search-input" placeholder="Cari barang..." value="{{ request()->query('query') }}">
+                <button type="submit" class="search-button">Cari</button>
+            </form>
+        </div>
 
         <div class="row">
             @foreach($foundItems as $item)
@@ -122,6 +167,8 @@
                 </div>
             @endforeach
         </div>
+
+        <a href="{{ route('home') }}" class="btn-back-home">Kembali ke Home</a>
     </div>
 </section>
 
