@@ -48,7 +48,6 @@
         /* Comments Section */
         .comments-section {
             margin-top: 0px;
-            
         }
 
         .comment, .reply {
@@ -59,7 +58,6 @@
             margin-bottom: 10px;
             background-color: #fafafa;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            
         }
 
         .comment .avatar, .reply .avatar {
@@ -71,7 +69,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            
         }
 
         .comment .avatar img, .reply .avatar img {
@@ -79,8 +76,6 @@
             height: 100%;
             object-fit: contain;
             object-position: center;
-            
-
         }
 
         .comment .content, .reply .content {
@@ -142,7 +137,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            
         }
 
         .image-wrapper img {
@@ -151,6 +145,20 @@
             object-fit: cover; /* Menjaga proporsi gambar */
         }
 
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
 
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -177,16 +185,18 @@
         
         @if($item->image)
             <div class="image-wrapper">
-                <img src="{{ asset('storage/' . $item->image) }}" alt="{{ $item->item_name }}" style="max-width: 100%; height: auto;">>
-                
+                <img src="{{ asset('storage/' . $item->image) }}" alt="{{ $item->item_name }}" style="max-width: 100%; height: auto;">
             </div>
-        @elseif($item->image_path)
+        @endif
+
+        @if($item->image_path) 
             <div class="image-wrapper">
                 <img src="{{ asset('storage/' . $item->image_path) }}" alt="{{ $item->item_name }}" style="max-width: 100%; height: auto;">
             </div>
-        @else
-            <p>No image available.</p>   
         @endif
+
+        <!-- Back Button -->
+        <a href="{{ route('home') }}" class="back-button">Back to Home</a>
 
         <div class="comments-section">
             <h2>Comments</h2>
