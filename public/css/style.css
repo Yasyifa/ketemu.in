@@ -1,0 +1,146 @@
+/* Style Umum */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e7edf1;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* CSS untuk Halaman Login/Register */
+body.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+body.login-page .container {
+    text-align: center;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+body.login-page .logo-container {
+    margin-bottom: 20px;
+}
+
+body.login-page .logo {
+    width: 100px;
+    height: auto;
+}
+
+body.login-page .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #3c596e;
+}
+
+body.login-page .form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+body.login-page .input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+body.login-page .input:focus {
+    border-color: #bcccd8;
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(29, 128, 170, 0.5);
+}
+
+body.login-page .btn {
+    background-color:#18313a;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+
+}
+
+
+
+body.login-page .btn-secondary {
+    background-color: #f0f0f0;
+    color: #43647f;
+}
+
+body.login-page .redirect {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+body.login-page .link {
+    color: #4a677d;
+}
+
+/* CSS untuk Halaman Home */
+body.home-page .sidebar {
+    width: 150px;
+    background-color: #2a6246;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+body.home-page .sidebar a {
+    color: white;
+    padding: 15px;
+    display: block;
+}
+
+body.home-page .sidebar a:hover {
+    background-color: #4b8a68;
+}
+
+body.home-page .content {
+    margin-left: 150px;
+    padding: 30px;
+}
+
+body.home-page .topbar {
+    background-color: #8bc1a8;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+body.home-page .card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+body.home-page footer {
+    text-align: center;
+    margin-top: 50px;
+    color: gray;
+}
+
+
